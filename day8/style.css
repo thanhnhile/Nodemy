@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(120deg, #3ca7ee, #9b408f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.wrapper{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 5%);
+    text-align: center;
+}
+h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    padding-top: 20px;
+    line-height: 1.4;
+
+}
+form{
+    padding-inline: 40px;
+}
+.form-group{
+    width: 100%;
+    margin-block: 40px;
+    position: relative;
+}
+.form-group.invalid span{
+    background-color: #e74c3c;
+}
+.form-control{
+    width: 100%;
+    height: 40px;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+}
+.form-control:focus{
+    border: none;
+    outline: none;
+}
+.form-group span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #adadad;
+    text-align: left;
+    transition: 0.3s ease;
+} 
+.form-control:focus ~ span{
+    background-color: #2691d9;
+}
+.form-group small{
+    margin-top: 3px;
+    font-size: 1.2rem;
+    color: #e74c3c;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.login-btn{
+    margin-top: 20px;
+    width: 100%;
+    padding-block: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: #2691d9;
+}
+.login-btn:hover{
+    background-color: #08609a;
+}
+.signup-link, .signup-link a{
+    margin-block: 25px;
+    font-size: 1.6rem;
+    color:#666666;
+}
+.signup-link a{
+    text-decoration: none;
+    color: #2691d9;
+}

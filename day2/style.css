@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&family=Varela+Round&display=swap');
+
+:root {
+    --primary-color: #f2726a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 80%;
+    height: 100vh;
+    margin: 120px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:60px;
+}
+
+.card {
+    width: 100%;
+    height: 400px;
+    background-color: #242628;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    position: relative;
+}
+
+.card__img {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+}
+.card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+    
+}
+.card h2{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 40px;
+    font-weight: 600;
+}
+.card p{
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+.card__social {
+    list-style-type: none;
+    margin: 25px 0 40px;
+}
+.card__social  li{
+    display: inline-block;
+    margin: 0 20px;
+}
+.card__social--link  i{
+    font-size: 1.8rem;
+    color: #fff;
+    transition: 0.2s;
+}
+.card__social--link  i:hover{
+    color: var(--primary-color);
+}
+
+.card__button {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 10px;
+    font-weight: 300;
+    transition: 0.4s;
+}
+.card__button:hover{
+    background-color: var(--primary-color);
+}
+.card__img:hover{
+    transform: translateY(-70%) scale(1.5);
+    border:unset;
+}
+.card__img:hover ~ h2{
+    transform: skew(5deg);
+}
+

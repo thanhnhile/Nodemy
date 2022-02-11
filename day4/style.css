@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #e56f6f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color:#dadada;
+    display: flex;
+}
+.warpper{
+    width: 80%;
+    margin:auto;
+    display: grid;
+    grid-template: repeat(2,200px) / repeat(4,1fr);
+    column-gap: 40px;
+    row-gap: 20px;
+}
+.image{
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.25s;
+}
+.image:hover img{
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.gallery{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 35px;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.25s;
+    
+}
+.gallery.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+.gallery i{
+    cursor: pointer;
+}
+.gallery > .fa-times{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+.prev{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+.next{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 25px;
+}
+.gallery-inner{
+    width: 944px;
+    height: 437px;
+    margin: auto;
+}
+.gallery-inner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.close{
+
+}
+.control.prev{
+
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Register</h1>
+        <form action="#" id="form-1">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="User name" id="username" name="username">
+                <span></span>
+                <small class="message-error"></small>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" id="email" name="message-error">
+                <span></span>
+                <small class="message-error"></small>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" id="pwd" name="pwd">
+                <span></span>
+                <small class="message-error"></small>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirm Password" id="confirm" name="confirm">
+                <span></span>
+                <small class="message-error"></small>
+            </div>
+            <div>
+                <input type="submit" value="Login" class="login-btn">
+            </div>
+        </form>
+        <div class="signup-link">
+            Not a member? <a href="#">Signup</a>
+        </div>
+    </div>
+    <script src="./validator.js"></script>
+    <script>
+        Validator({
+          form: "#form-1",
+          errorSelector: 'small',
+          formGroupSelector: '.form-group',
+          rules: [
+              Validator.isRequired("#username"),
+              Validator.isEmail("#email"),
+              Validator.minLength("#pwd",6),
+              Validator.isRequired("#confirm","Mục này không được bỏ trống"),
+              Validator.isConfirmed("#confirm",()=>{
+                  let pwd = document.querySelector('#pwd')
+                  return pwd.value
+              })
+
+            
+             
+          ],
+          onSubmit:function(data){
+              alert(data)
+            
+          }
+        });
+      </script>
+</body>
+</html>

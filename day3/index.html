@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <button class="open-modal">Open Modal</button>
+
+    <div class="modal">
+        <div class="modal__header">
+            <h5>Welcome to Thanh Nhi Le</h5>
+            <span><i class="fas fa-times"></i></span>
+        </div>
+        <div class="modal__body">
+            <h1>Modal</h1>
+            <h6>Đây là phần body của modal</h6>
+        </div>
+        <div class="modal__footer">
+            <button>Close</button>
+        </div>
+    </div>
+    <div class="modal-cover"></div>
+
+    <script>
+        const openModal = document.querySelector('.open-modal')
+        const modal = document.querySelector('.modal')
+        const coverModal = document.querySelector('.modal-cover')
+        openModal.onclick = function () {
+            this.style.display = 'none'
+            coverModal.style.display = modal.style.display = 'block'
+
+        }
+
+        document.querySelector('.modal__footer button').onclick = function () {
+            this.parentElement.parentElement.style.display = 'none'
+            openModal.style.display = 'block'
+            coverModal.style.display = modal.style.display = 'none'
+        }
+
+        document.querySelector('.modal__header .fa-times').onclick = function () {
+            this.parentElement.parentElement.parentElement.style.display = 'none'
+            openModal.style.display = 'block'
+            coverModal.style.display = modal.style.display = 'none'
+        }
+
+
+    </script>
+</body>
+
+</html>

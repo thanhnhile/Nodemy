@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&family=Varela+Round&display=swap');
+
+:root {
+    --primary-color: #e56f6f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );
+    position: relative;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.open-modal{
+    background-color: #fff;
+    color: #000;
+    padding: 20px 40px;
+    border-radius: 6px;
+    font-size: 2rem;
+    border:none;
+    outline: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%; 
+}
+.open-modal:hover{
+    opacity: 0.9;
+}
+.modal-cover{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -9999;
+    display: none;
+}
+.modal{
+    width:450px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%; 
+    animation: appear 0.8s linear;
+}
+
+.modal__header{
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+.modal__header h5{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.modal__header span i{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.modal__body{
+    padding: 15px;
+}
+.modal__body h1{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.modal__body h6{
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+.modal__footer{
+    padding: 15px;
+    text-align: right;
+}
+.modal__footer button{
+    padding:10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.5rem;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes appear {
+    from{
+       top:-100%;
+    }
+}
