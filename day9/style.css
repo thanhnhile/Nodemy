@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    background-image:linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,1)), url("./images/hot.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+#weather{
+    margin: auto;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 30px 20px 60px; 
+}
+.hot{
+    background-image:url("./images/hot.png");
+}
+.cold{
+    background-image:url("./images/cold.png");
+}
+.input-search{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    opacity: 0.4;
+    border: none;
+    outline: none;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 19px;
+    box-shadow: 0 5px 4px rgb(0 0 0 / 20%);
+    transition: 0.4s;
+}
+.input-search:focus{
+    opacity: 1;
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.content{
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+}
+.name{
+    font-size: 35px;
+    white-space: nowrap;
+    text-shadow: 2px 2px rgb(0 0 0 / 50%);
+}
+.city{
+
+}
+.country{
+
+}
+.date-time{
+    margin: 6px 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+.time{
+
+}
+.date{
+
+}
+.temperature{
+    display: inline-block;
+    margin: 20px 0 30px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 15px;
+    font-size: 65px;
+    font-weight: 800;
+    text-shadow: 5px 5px rgb(0 0 0 / 60%);
+    box-shadow: 2px 2px 0 2px rgb(0 0 0 / 50%);
+}
+.value{
+
+}
+.short-desc{
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 3px 3px 2px rgb(0 0 0 / 50%);
+    text-transform: capitalize;
+}
+.more-desc{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.visibility,
+.wind,
+.cloud {
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+
+}
+.visibility span,
+.wind span,
+.cloud span{
+    margin-top: 15px;
+}

@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to right, #ffe000, #799f0c);
+    display: flex;
+}
+
+.container {
+    margin: auto;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #aaa;
+}
+
+input[type="text"] {
+    padding-inline: 20px;
+    font-size: 24px;
+    color: #444;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"] {
+    color: #fff;
+    padding: 5px 15px;
+    background-color: yellowgreen;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#to-do-list {
+    list-style-type: none;
+}
+
+#to-do-list li {
+    padding: 20px;
+    font-size: 22px;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#to-do-list li span {
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+li.complete span {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+#to-do-list li i {
+    color: #aaa;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+#to-do-list li:hover i {
+    opacity: 1;
+}
