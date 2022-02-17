@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: #ecf0f1;
+    display: flex;
+}
+.control{
+    margin: auto;
+}
+.control button{
+    padding: 8px 16px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.success{
+    background-color: green;
+}
+.warning{
+    background-color: orange;
+}
+.error{
+    background-color: red;
+}
+#toast{
+    position: fixed;
+    top: 0;
+    right: 20px;
+}
+.toast.success{
+    background-color: rgba(29, 163, 50, 0.6);
+    color: green;
+}
+.toast.warning{
+    background-color: rgba(255, 196, 47, 0.6);
+    color: orange;
+}
+.toast.error{
+    background-color: rgba(237, 0, 0, 0.6);
+    color: red;
+}
+.toast{
+    margin-top: 10px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    animation: toastShow 1s ease forwards;
+}
+.toast .message{
+    color: #fff;
+}
+.toast .icon{
+    color:#fff;
+    margin-right: 16px;
+    font-size: 28px;
+    font-weight: 900;
+}
+.toast::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: currentColor;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    animation: countdown linear 4s forwards;
+}
+.toast::before{
+    content: "";
+    width: 5px;
+    background-color: currentColor;
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+@keyframes countdown{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+@keyframes toastShow{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80% {
+		transform: translateX(10%);
+	}
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes toastHide{
+    40%{
+        transform: translateX(10%);
+    }
+    80%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(110%);
+    }
+}
