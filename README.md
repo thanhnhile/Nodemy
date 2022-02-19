@@ -1,3 +1,4 @@
 Thực hành Project 30 days HTML CSS JS
-View at: https://thanhnhile.github.io/Nodemy/day${X}/
-X là 1,2,3,....,30
+View at
+Day 1: https://github.com/thanhnhile/Nodemy/day1
+Day2: https://github.com/thanhnhile/Nodemy/day2
