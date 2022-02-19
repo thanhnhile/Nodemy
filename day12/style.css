@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    padding-top:150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+h1{
+    margin-bottom: 78px;
+}
+.range{
+    width: 602px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    overflow: hidden;
+}
+.progress{
+    max-width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #bb69cc, #246bac);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: e-resize;
+}
+.progress p{
+    color: #fff;
+    font-size: 25px;
+}
