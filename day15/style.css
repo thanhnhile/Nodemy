@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #dadada;
+}
+.container{
+    width: 400px;
+    margin:80px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    overflow: hidden;
+}
+header{
+    padding: 20px 15px;
+}
+h1{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-control{
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.form-control i{
+    font-size: 20px;
+    padding-left: 10px;
+}
+#filter-input{
+    flex: 1;
+    padding: 8px 10px;
+    font-style: 16px;
+    border: none;
+    outline: none;
+}
+.list-product{
+    width: 100%;
+    max-height: 60vh;
+    list-style-type: none;
+    margin-top: 15px;
+    overflow-y: auto;
+}
+.product-item{
+    width: 100%;
+    padding: 10px 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.list-product li:hover{
+    background-color: #dddddd;
+}
+.product-img{
+    width: 20%;
+    margin-right: 20px;
+}
+.product-img img{
+    width: 100%;
+    object-fit: cover;
+}
+.product-info{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+.product-info h4{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.list-product h3{
+    text-align: center;
+}
