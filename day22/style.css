@@ -1,0 +1,69 @@
+:root{
+    --primary-color:#0f9d58;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    width: 90%;
+    margin: 50px auto 0;
+    background-color: #e2f3e2;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+.filter{
+    list-style:  none;
+    margin-bottom: 40px;
+}
+.filter-btn{
+    display: inline-block;
+    padding: 10px 40px;
+    background: #fff;
+    color: var(--primary-color);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0 10px;
+    border:  1px solid var(--primary-color);
+    cursor: pointer;
+}
+.active{
+    color: #fff;
+    background: var(--primary-color);
+    border: unset;
+}
+.food-list{
+    width: 80%;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.food-item{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.food-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+.food-item.hide{
+    display: none;
+}
+.food-item:hover img{
+    transform: rotate(90deg) scale(1.7);
+}
