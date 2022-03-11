@@ -13,7 +13,11 @@ function setShowImg(){
 listImg.forEach((img,index)=>{
     img.addEventListener('click',function(){
         currentIndex = index
-        setShowImg()
+        imgFeature.style.animation=''
+        setTimeout(()=>{
+            setShowImg()
+            imgFeature.style.animation='slideRight 1s ease-in-out forwards'
+        },1000)
     
     })
 })
@@ -31,7 +35,7 @@ btnNext.addEventListener('click',()=>{
     setTimeout(()=>{
         setShowImg()
         imgFeature.style.animation='slideLeft 1s ease-in-out forwards'
-    },2000)
+    },1000)
 })
 function autoSlideShow(){
     setInterval(()=>{

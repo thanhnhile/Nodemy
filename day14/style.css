@@ -25,7 +25,7 @@ body{
 .img-feater{
     width: 100%;
     height: 100%;
-    animation: slideRight 1s ease-in-out forwards;
+    /* animation: slideRight 1s ease-in-out forwards; */
 }
 .img-feater img{
     width: 100%;
